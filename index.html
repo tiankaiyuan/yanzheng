@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>挖哈哈 隐私政策</title>
+    <style>
+        :root {
+            --primary: #00D4AA;
+            --primary-dark: #00B894;
+            --bg: #F7F8FA;
+            --card-bg: #FFFFFF;
+            --text-primary: #1A1A2E;
+            --text-secondary: #555770;
+            --text-muted: #8E8EA0;
+            --border: #E8E8EE;
+            --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+            --radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1A1A2E 0%, #16213E 50%, #0F3460 100%);
+            padding: 48px 24px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 50%, rgba(0, 212, 170, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 50%, rgba(0, 212, 170, 0.05) 0%, transparent 50%);
+            animation: headerGlow 8s ease-in-out infinite alternate;
+        }
+
+        @keyframes headerGlow {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-2%, -1%); }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .header-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(0, 212, 170, 0.15);
+            border: 1px solid rgba(0, 212, 170, 0.3);
+            color: var(--primary);
+            font-size: 13px;
+            font-weight: 500;
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+        }
+
+        .header-badge svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            font-size: 15px;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.6;
+        }
+
+        .header-dates {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 24px;
+        }
+
+        .header-dates span {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.45);
+        }
+
+        .header-dates span strong {
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 32px 20px 60px;
+        }
+
+        .tip-card {
+            background: linear-gradient(135deg, rgba(0, 212, 170, 0.06) 0%, rgba(0, 212, 170, 0.02) 100%);
+            border: 1px solid rgba(0, 212, 170, 0.2);
+            border-radius: var(--radius);
+            padding: 24px 28px;
+            margin-bottom: 32px;
+            position: relative;
+        }
+
+        .tip-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 16px;
+            bottom: 16px;
+            width: 4px;
+            background: var(--primary);
+            border-radius: 0 4px 4px 0;
+        }
+
+        .tip-card h2 {
+            font-size: 17px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tip-card h2 svg {
+            width: 20px;
+            height: 20px;
+            color: var(--primary);
+        }
+
+        .tip-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .tip-list li {
+            font-size: 14px;
+            color: var(--text-secondary);
+            padding: 6px 0 6px 24px;
+            position: relative;
+            line-height: 1.7;
+        }
+
+        .tip-list li::before {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 14px;
+            width: 6px;
+            height: 6px;
+            background: var(--primary);
+            border-radius: 50%;
+        }
+
+        .tip-footer {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(0, 212, 170, 0.15);
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .content-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 40px 36px;
+            margin-bottom: 24px;
+        }
+
+        .content-card p {
+            font-size: 15px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            text-align: justify;
+        }
+
+        .content-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 36px 0 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title .num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background: var(--primary);
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+
+        .section-title:first-child {
+            margin-top: 0;
+        }
+
+        .sub-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 24px 0 12px;
+            padding-left: 14px;
+            border-left: 3px solid var(--primary);
+        }
+
+        .sub-sub-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 18px 0 10px;
+        }
+
+        .policy-list {
+            list-style: none;
+            padding: 0;
+            margin: 8px 0 16px;
+        }
+
+        .policy-list li {
+            font-size: 14.5px;
+            color: var(--text-secondary);
+            padding: 5px 0 5px 20px;
+            position: relative;
+            line-height: 1.8;
+        }
+
+        .policy-list li::before {
+            content: '';
+            position: absolute;
+            left: 2px;
+            top: 13px;
+            width: 6px;
+            height: 6px;
+            background: var(--border);
+            border-radius: 50%;
+        }
+
+        .numbered-list {
+            list-style: none;
+            padding: 0;
+            counter-reset: item;
+            margin: 8px 0 16px;
+        }
+
+        .numbered-list li {
+            font-size: 14.5px;
+            color: var(--text-secondary);
+            padding: 5px 0 5px 28px;
+            position: relative;
+            line-height: 1.8;
+            counter-increment: item;
+        }
+
+        .numbered-list li::before {
+            content: counter(item) '.';
+            position: absolute;
+            left: 4px;
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .toc {
+            background: var(--bg);
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-bottom: 28px;
+        }
+
+        .toc-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4px 24px;
+        }
+
+        .toc-list li {
+            font-size: 14px;
+            color: var(--text-secondary);
+            padding: 4px 0;
+        }
+
+        .toc-list li a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .toc-list li a:hover {
+            color: var(--primary);
+        }
+
+        .toc-list li a::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 50%;
+            margin-right: 8px;
+            vertical-align: middle;
+        }
+
+        .highlight-box {
+            background: rgba(0, 212, 170, 0.05);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 16px 0;
+            font-size: 14.5px;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, #1A1A2E 0%, #16213E 100%);
+            border-radius: var(--radius);
+            padding: 28px 32px;
+            margin-top: 32px;
+            color: #fff;
+        }
+
+        .contact-card h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .contact-card h3 svg {
+            width: 20px;
+            height: 20px;
+            color: var(--primary);
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 8px 0;
+            font-size: 14.5px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .contact-item .label {
+            color: rgba(255, 255, 255, 0.45);
+            min-width: 70px;
+            flex-shrink: 0;
+        }
+
+        .contact-item .value {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .contact-note {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 13.5px;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.7;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        .no-data-box {
+            background: rgba(0, 212, 170, 0.05);
+            border: 1px dashed rgba(0, 212, 170, 0.4);
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin: 16px 0;
+            text-align: center;
+        }
+
+        .no-data-box p {
+            font-size: 15px;
+            color: var(--primary-dark);
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .no-data-box .sub-text {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            font-weight: 400;
+            margin-top: 6px;
+        }
+
+        @media (max-width: 640px) {
+            .header {
+                padding: 36px 16px 32px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .header-dates {
+                flex-direction: column;
+                gap: 8px;
+                align-items: center;
+            }
+
+            .container {
+                padding: 20px 12px 40px;
+            }
+
+            .content-card {
+                padding: 24px 18px;
+            }
+
+            .toc-list {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 17px;
+            }
+        }
+
+        @media print {
+            .header {
+                background: #1A1A2E !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .tip-card {
+                border: 1px solid #ccc;
+            }
+
+            .tip-card::before {
+                background: #333;
+            }
+
+            .content-card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+
+            .contact-card {
+                background: #1A1A2E !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-badge">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                TapTap 平台
+            </div>
+            <h1>挖哈哈隐私政策</h1>
+            <p>我们非常重视保护您的个人信息和隐私，请您仔细阅读以下内容</p>
+            <div class="header-dates">
+                <span>更新日期：<strong>2026年5月7日</strong></span>
+                <span>生效日期：<strong>2026年5月7日</strong></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Tip Card -->
+        <div class="tip-card">
+            <h2>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                温馨提示
+            </h2>
+            <p style="font-size:14.5px; color:var(--text-secondary); margin-bottom:12px;">欢迎您使用挖哈哈！我们非常重视保护您的个人信息和隐私。您可以通过《挖哈哈隐私政策》了解我们收集、使用、存储用户个人信息的情况，以及您所享有的相关权利。请您仔细阅读并充分理解相关内容：</p>
+            <ul class="tip-list">
+                <li>挖哈哈是一款纯本地运行的游戏应用，我们不会收集、存储或传输您的任何个人信息。</li>
+                <li>我们不会申请或使用您的任何设备权限。</li>
+                <li>我们未接入任何第三方SDK，不存在第三方收集您个人信息的情况。</li>
+                <li>我们已采取符合业界标准的安全防护措施保护您的个人信息。</li>
+                <li>如您是未成年人，请您和您的监护人仔细阅读本隐私政策，并在征得您的监护人授权同意的前提下使用我们的服务或向我们提供个人信息。</li>
+            </ul>
+            <div class="tip-footer">
+                请您阅读完整版《挖哈哈用户协议》及《挖哈哈隐私政策》了解详细信息。如您同意《挖哈哈用户协议》及《挖哈哈隐私政策》，请您点击"同意"开始使用我们的产品和服务，我们将尽全力保护您的个人信息安全。
+            </div>
+        </div>
+
+        <!-- Content Card -->
+        <div class="content-card">
+
+            <!-- Intro -->
+            <p>田凯远（以下简称"我们"）系移动应用程序"挖哈哈"（以下简称"挖哈哈"）的开发者和运营者。我们非常重视保护用户（以下简称"您"）的个人信息和隐私。您在使用挖哈哈时，我们不会收集、使用、保存、共享您的任何个人信息。为呈现我们处理您个人信息的情况，我们特制定《挖哈哈隐私政策》（以下简称"隐私政策"），我们承诺严格按照本隐私政策处理您的个人信息。</p>
+
+            <div class="highlight-box">
+                我们在此提醒您：在您使用挖哈哈前，请您务必认真阅读本隐私政策，充分理解各条款内容。您知晓并确认，您勾选"同意"本隐私政策并使用挖哈哈，就表示您同意我们按照本隐私政策处理您的个人信息。请您知悉，本政策仅适用于我们通过挖哈哈向您提供服务所收集的信息，不适用于通过接入挖哈哈以向您提供产品或服务的第三方所收集的信息。
+            </div>
+
+            <!-- TOC -->
+            <div class="toc">
+                <div class="toc-title">本隐私政策将帮助您了解以下内容：</div>
+                <ul class="toc-list">
+                    <li><a href="#section1">我们如何收集和使用您的个人信息</a></li>
+                    <li><a href="#section2">我们如何保存您的个人信息</a></li>
+                    <li><a href="#section3">我们如何使用Cookies和同类技术</a></li>
+                    <li><a href="#section4">我们如何共享、转让、公开披露您的个人信息</a></li>
+                    <li><a href="#section5">第三方产品或服务如何获得您的个人信息</a></li>
+                    <li><a href="#section6">我们如何保护您的个人信息</a></li>
+                    <li><a href="#section7">您如何管理您的个人信息</a></li>
+                    <li><a href="#section8">我们如何处理未成年人的个人信息</a></li>
+                    <li><a href="#section9">本隐私政策如何更新</a></li>
+                    <li><a href="#section10">如何联系我们</a></li>
+                </ul>
+            </div>
+
+            <!-- Section 1 -->
+            <h2 class="section-title" id="section1">
+                <span class="num">1</span>
+                我们如何收集和使用您的个人信息
+            </h2>
+
+            <h3 class="sub-title">（一）我们如何收集您的个人信息</h3>
+
+            <div class="no-data-box">
+                <p>挖哈哈不收集任何个人信息</p>
+                <p class="sub-text">挖哈哈是一款纯本地运行的游戏应用，我们不会收集您的任何个人信息，包括但不限于设备信息、位置信息、账户信息等。</p>
+            </div>
+
+            <h3 class="sub-title">（二）设备权限调用情况</h3>
+            <p>在您使用挖哈哈过程中，我们不会申请获取您的任何设备权限。挖哈哈无需任何设备权限即可正常运行。</p>
+
+            <div class="no-data-box">
+                <p>挖哈哈不使用任何设备权限</p>
+                <p class="sub-text">挖哈哈不需要调用您设备的任何权限（如相机、麦克风、位置、存储等），您可以放心使用。</p>
+            </div>
+
+            <h3 class="sub-title">（三）我们如何使用您的个人信息</h3>
+            <p>由于挖哈哈不收集任何个人信息，因此我们不存在使用您个人信息的情况。</p>
+
+            <h3 class="sub-title">（四）其他规则</h3>
+            <p>根据相关法律法规及国家标准，以下情形中，我们可能会收集、使用您的相关个人信息而无需征求您的授权同意：</p>
+            <ul class="numbered-list">
+                <li>与我们履行法律法规规定的义务相关的；</li>
+                <li>与国家安全、国防安全直接相关的；</li>
+                <li>与公共安全、公共卫生、重大公共利益直接相关的；</li>
+                <li>与刑事侦查、起诉、审批和判决执行等直接相关的；</li>
+                <li>出于维护个人信息主体或其他个人的生命、财产等重大合法权益但又很难得到本人授权同意的；</li>
+                <li>所涉及的个人信息是个人信息主体或监护人自行向社会公众公开的；</li>
+                <li>根据个人信息主体要求签订和履行合同所必需的；</li>
+                <li>从合法公开披露的信息中收集个人信息的，如合法的新闻报道、政府信息公开等渠道；</li>
+                <li>维护所提供产品或服务的安全稳定运行所必需的，如发现、处置产品或服务的故障。</li>
+            </ul>
+
+            <!-- Section 2 -->
+            <h2 class="section-title" id="section2">
+                <span class="num">2</span>
+                我们如何保存您的个人信息
+            </h2>
+            <p>由于挖哈哈不收集任何个人信息，因此我们不存在保存您的个人信息的情况。挖哈哈的所有游戏数据均保存在您的本地设备上，不会上传至任何服务器。</p>
+
+            <!-- Section 3 -->
+            <h2 class="section-title" id="section3">
+                <span class="num">3</span>
+                我们如何使用Cookies和同类技术
+            </h2>
+
+            <h3 class="sub-title">（一）我们如何使用Cookies</h3>
+            <p>挖哈哈不使用任何Cookies或同类技术。我们不会在您的设备上存储任何追踪性信息。</p>
+
+            <h3 class="sub-title">（二）我们如何使用同类技术</h3>
+            <p>挖哈哈不使用任何同类追踪技术，包括但不限于Flash Cookies、本地存储、Web Beacon等。</p>
+
+            <!-- Section 4 -->
+            <h2 class="section-title" id="section4">
+                <span class="num">4</span>
+                我们如何共享、转让、公开披露您的个人信息
+            </h2>
+
+            <h3 class="sub-title">（一）委托处理</h3>
+            <p>由于挖哈哈不收集任何个人信息，因此我们不存在委托第三方处理您个人信息的情况。</p>
+
+            <h3 class="sub-title">（二）共享</h3>
+            <p>我们不会与任何公司、组织或个人共享您的个人信息。</p>
+
+            <h3 class="sub-title">（三）转让</h3>
+            <p>我们不会将您的个人信息转让给任何公司、组织和个人，但在涉及合并、收购、资产转让或破产清算时，如涉及到个人信息转让，我们会向您告知有关情况，并要求新的持有您个人信息的公司、组织继续受本政策的约束，否则我们将要求该公司、组织重新取得您的授权同意。</p>
+
+            <h3 class="sub-title">（四）公开披露</h3>
+            <p>除非本合同另有约定或法律明确规定，我们不会公开披露您的个人信息。</p>
+
+            <h3 class="sub-title">（五）例外情况</h3>
+            <p>另外，根据相关法律及国家标准，以下情形中，我们可能会共享、转让、公开披露个人信息无需事先征得您的授权同意：</p>
+            <ul class="numbered-list">
+                <li>与我们履行法律法规规定的义务相关的；</li>
+                <li>与国家安全、国防安全直接相关的；</li>
+                <li>与公共安全、公共卫生、重大公共利益直接相关的；</li>
+                <li>与刑事侦查、起诉、审判和判决执行等直接相关的；</li>
+                <li>出于维护个人信息主体或其他个人的生命、财产等重大合法权益但又很难得到本人授权同意的；</li>
+                <li>个人信息主体或监护人自行向社会公众公开的个人信息；</li>
+                <li>从合法公开披露的信息中收集个人信息的，如合法的新闻报道、政府信息公开等渠道。</li>
+            </ul>
+            <p>请注意，您在使用我们服务时自愿共享甚至公开分享的信息，可能会涉及您或他人的个人信息甚至个人敏感信息。请您谨慎共享或公开，如所涉信息包含他人个人信息，请您在共享或公开前取得他人同意。</p>
+            <p>请知悉，根据法律规定，若我们采取技术措施和其他必要措施处理个人信息，使得数据接收方无法重新识别特定个人且不能复原，经上述处理后的数据的共享、转让、公开披露无需另行向您通知并征得您的同意。</p>
+
+            <!-- Section 5 -->
+            <h2 class="section-title" id="section5">
+                <span class="num">5</span>
+                第三方产品或服务如何获得您的个人信息
+            </h2>
+            <p>挖哈哈未接入任何第三方软件开发工具包（SDK），不存在第三方通过SDK获取您个人信息的情况。</p>
+
+            <div class="no-data-box">
+                <p>挖哈哈未接入任何第三方SDK</p>
+                <p class="sub-text">我们承诺挖哈哈不包含任何第三方SDK，您的信息不会被任何第三方获取。</p>
+            </div>
+
+            <!-- Section 6 -->
+            <h2 class="section-title" id="section6">
+                <span class="num">6</span>
+                我们如何保护您的个人信息
+            </h2>
+            <p>虽然挖哈哈不收集任何个人信息，但我们依然非常重视信息安全，并采取一切合理可行的措施，保护您的个人信息：</p>
+            <ul class="policy-list">
+                <li>我们采取了行业通行的数据保护技术与管理措施，例如网络隔离、数据加密、员工访问控制等措施，以防止其遭到未经授权的访问、披露、篡改、丢失或毁坏。</li>
+                <li>请您知悉，虽然我们将尽力确保或担保您发送给我们的任何信息的安全性，但互联网环境并非百分之百安全，我们亦不对由此产生或与之相关的任何风险、损失承担责任。</li>
+            </ul>
+            <p>在不幸发生个人信息安全事件后，我们将按照法律法规的要求，及时向您告知：安全事件的基本情况和可能的影响、我们已采取或将要采取的处置措施、您可自主防范和降低风险的建议、对您的补救措施等。我们将及时将事件相关情况以应用程序推送、电子邮件、短信、电话等方式告知您，难以逐一告知个人信息主体时，我们会采取合理、有效的方式发布公告。同时，我们还将按照监管部门要求，主动上报个人信息安全事件的处置情况。</p>
+
+            <!-- Section 7 -->
+            <h2 class="section-title" id="section7">
+                <span class="num">7</span>
+                您如何管理您的个人信息
+            </h2>
+            <p>由于挖哈哈不收集任何个人信息，您的所有游戏数据均保存在本地设备上。您可以随时通过清除应用数据或卸载应用的方式删除这些信息。</p>
+
+            <h3 class="sub-title">（一）访问及更正您的个人信息</h3>
+            <p>由于我们不收集您的个人信息，因此不存在需要访问或更正的信息。如您的本地游戏数据需要管理，您可以通过设备的设置功能进行操作。</p>
+
+            <h3 class="sub-title">（二）删除您的个人信息</h3>
+            <p>由于我们不收集您的个人信息，因此不存在需要删除的信息。如需删除本地游戏数据，您可以通过以下方式：</p>
+            <ul class="numbered-list">
+                <li>通过设备设置清除挖哈哈的应用数据；</li>
+                <li>卸载挖哈哈应用，这将同时删除所有本地游戏数据。</li>
+            </ul>
+
+            <h3 class="sub-title">（三）改变您授权同意的范围</h3>
+            <p>挖哈哈不申请任何设备权限，因此不涉及授权同意范围的变更。</p>
+
+            <h3 class="sub-title">（四）注销账户</h3>
+            <p>挖哈哈无需注册账户即可使用，因此不涉及账户注销。如需删除本地游戏数据，您可以直接卸载应用。</p>
+
+            <h3 class="sub-title">（五）响应您的上述请求</h3>
+            <p>如您对本隐私政策有任何疑问或需要进一步帮助，您可以通过本隐私政策载明的方式与我们联系。为保障安全，您可能需要提供书面请求，或以其他方式证明您的身份。我们可能会先要求您验证自己的身份，然后再处理您的请求。</p>
+            <p>对于您合理的请求，我们原则上不收取费用，但对多次重复、超出合理限度的请求，我们将视情收取一定成本费用。对于那些无端重复、需要过多技术手段、给他人合法权益带来风险或者非常不切实际的请求，我们可能会予以拒绝。</p>
+
+            <h3 class="sub-title">（六）响应情形的例外</h3>
+            <p>在以下情形中，我们将无法响应您的请求：</p>
+            <ul class="numbered-list">
+                <li>与我们履行法律法规规定的义务相关的；</li>
+                <li>与国家安全、国防安全直接相关的；</li>
+                <li>与公共安全、公共卫生、重大公共利益直接相关的；</li>
+                <li>与刑事侦查、起诉、审判和执行判决等直接相关的；</li>
+                <li>我们有充分证据表明个人信息主体存在主观恶意或滥用权利的；</li>
+                <li>出于维护个人信息主体或其他个人的生命、财产等重大合法权益但又很难得到本人同意的；</li>
+                <li>响应个人信息主体的请求将导致个人信息主体或其他个人、组织的合法权益受到严重损害的；</li>
+                <li>涉及商业秘密的。</li>
+            </ul>
+
+            <!-- Section 8 -->
+            <h2 class="section-title" id="section8">
+                <span class="num">8</span>
+                我们如何处理未成年人的个人信息
+            </h2>
+            <p>我们非常重视对未成年人个人信息的保护。根据相关法律法规的规定，收集、使用未满14周岁的未成年人的个人信息，需由监护人授权同意；收集、使用已满14周岁未满18周岁的未成年人个人信息，可由监护人授权同意或自行授权同意。</p>
+            <p>由于挖哈哈不收集任何个人信息，未成年人可以放心使用。如您为未成年人（尤其是不满14周岁的未成年人），我们仍建议您请您的父母或其他监护人仔细阅读本隐私政策，并在征得您的监护人授权同意的前提下使用我们的服务或向我们提供信息。</p>
+            <p>如您是未成年人的监护人，请您关注您所监护的未成年人是否是在您授权同意之后使用我们的产品或服务。如果您对您所监护的未成年人的个人信息有疑问，请通过本隐私政策载明的方式与我们联系。</p>
+
+            <!-- Section 9 -->
+            <h2 class="section-title" id="section9">
+                <span class="num">9</span>
+                本隐私政策如何更新
+            </h2>
+            <p>我们的隐私政策可能会适时发生变更。我们会在本页面上发布对本隐私政策所做的任何变更。对于重大变更，我们还会提供更为显著的通知（我们可能会通过在浏览页面做特别提示等方式，说明隐私政策的具体变更内容）。未经您明确同意，我们不会削减您按照本隐私政策所应享有的权利。</p>
+            <p>本隐私政策所指的重大变更包括但不限于：我们的服务模式发生重大变化；个人信息共享、转让或公开披露的主要对象发生变化；您参与个人信息处理方面的权利及其行使方式发生重大变化；我们的联系方式及投诉渠道发生变化；个人信息安全影响评估报告表明存在高风险时。</p>
+            <p>我们还会将本隐私政策的旧版本存档，供您查阅。</p>
+
+            <!-- Section 10 -->
+            <h2 class="section-title" id="section10">
+                <span class="num">10</span>
+                如何联系我们
+            </h2>
+            <p>如果您对本政策或个人信息保护有任何问题，您可以将您的书面疑问、意见或建议通过以下方式联系我们：</p>
+
+            <div class="contact-card">
+                <h3>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    联系信息
+                </h3>
+                <div class="contact-item">
+                    <span class="label">开发者：</span>
+                    <span class="value">田凯远</span>
+                </div>
+                <div class="contact-item">
+                    <span class="label">邮箱：</span>
+                    <span class="value">727480756@qq.com</span>
+                </div>
+                <div class="contact-note">
+                    一般情况下，我们将在十五个工作日内回复。如果您对我们的回复不满意，特别是我们的个人信息处理行为损害了您的合法权益，您还可以向网信、电信、公安及工商等监管部门进行投诉或举报，或通过向被告住所地有管辖权的法院提起诉讼来寻求解决方案。
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>本隐私政策通过 TapTap 平台发布 &middot; 请妥善保管您的个人信息</p>
+    </footer>
+
+</body>
+</html>
